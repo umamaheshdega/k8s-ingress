@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: 
+        image: mahesh452/app1:1.0.0
         ports:
         - containerPort: 80
 
