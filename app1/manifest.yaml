@@ -42,11 +42,11 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/backend-protocol: '[{"HTTPS": 443}]'
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:439307002497:certificate/a1690197-fd42-420c-a8de-094d08b1e331
-    alb.ingress.kubernetes.io/group.name: maheshdevops
+    alb.ingress.kubernetes.io/group.name: joindevops
 spec:
   ingressClassName: alb
   rules:
-  - host: "app1.maheshdevops.info"
+  - host: "app1.daws82s.online"
     http:
       paths:
       - pathType: Prefix
