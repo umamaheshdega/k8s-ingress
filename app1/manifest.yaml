@@ -21,18 +21,6 @@ spec:
         - containerPort: 80
 
 ---
-kind: Service
-apiVersion: v1
-metadata:
-  name: app1
-spec:
-  selector:
-    app: app1
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -40,7 +28,7 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80, "HTTPS": 443}]'
     alb.ingress.kubernetes.io/backend-protocol: HTTP
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:439307002497:certificate/a1690197-fd42-420c-a8de-094d08b1e331
     alb.ingress.kubernetes.io/group.name: joindevops
@@ -57,5 +45,3 @@ spec:
             name: app1
             port:
               number: 80
-
-
