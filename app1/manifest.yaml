@@ -40,7 +40,7 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/backend-protocol: '[{"HTTP": 80}]'
+    alb.ingress.kubernetes.io/backend-protocol: '[{"HTTPS": 443}]'
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:439307002497:certificate/a1690197-fd42-420c-a8de-094d08b1e331
     alb.ingress.kubernetes.io/group.name: maheshdevops
 spec:
