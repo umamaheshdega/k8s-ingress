@@ -46,7 +46,7 @@ metadata:
 spec:
   ingressClassName: alb
   rules:
-  - host: "maheshdevops.info"
+  - host: "app1.maheshdevops.info"
     http:
       paths:
       - pathType: Prefix
